@@ -78,6 +78,35 @@ class TextEditor extends ConsumerWidget{
                               iconSize: 30,
                               onPressed: () {},
                             )),
+                        const SizedBox(width:80),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.text_decrease,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+                        const SizedBox(width:10),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.text_increase,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+
+
+
 
                       ],
                     ),
@@ -131,7 +160,7 @@ class TextEditor extends ConsumerWidget{
                             ),
                             child: IconButton(
                               icon: const Icon(
-                                Icons.text_decrease,
+                                Icons.format_align_left_sharp,
                               ),
                               iconSize: 30,
                               onPressed: () {},
@@ -144,12 +173,12 @@ class TextEditor extends ConsumerWidget{
                             ),
                             child: IconButton(
                               icon: const Icon(
-                                Icons.text_increase,
+                                Icons.format_align_justify_sharp,
                               ),
                               iconSize: 30,
                               onPressed: () {},
                             )),
-                        const SizedBox(width:20),
+                        const SizedBox(width:10),
                         Container(
                             decoration: const ShapeDecoration(
                               color: Colors.white,
@@ -157,11 +186,13 @@ class TextEditor extends ConsumerWidget{
                             ),
                             child: IconButton(
                               icon: const Icon(
-                                Icons.format_align_justify_sharp,
+                                Icons.format_align_right_sharp,
                               ),
                               iconSize: 30,
                               onPressed: () {},
                             )),
+
+
                       ],
                     )
                   ],
@@ -175,7 +206,8 @@ class TextEditor extends ConsumerWidget{
                 height: MediaQuery.of(context).size.height*0.8,
                 decoration: BoxDecoration(
                   image: const DecorationImage(
-                    image: AssetImage("assets/images/wood_floor.jpg"),
+                    opacity: 0.4,
+                    image: AssetImage("assets/images/page.jpg"),
                     fit: BoxFit.cover,
                   ), //DecorationImage
                   border: Border.all(
@@ -206,37 +238,13 @@ class TextEditor extends ConsumerWidget{
                   child: Container(
                     width: 100,
                     height: 100,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/wood_floor.jpg"),
-                        fit: BoxFit.cover,
-                      ), //DecorationImage
-                      /*border: Border.all(
-                        //color: Colors.green,
-                        width: 1,
-                      ), *///Border.all
-                      //borderRadius: BorderRadius.circular(15),
-                      /*boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black,
-                        offset: Offset(
-                          5.0,
-                          5.0,
-                        ), //Offset
-                        blurRadius: 10.0,
-                        spreadRadius: 2.0,
-                      ), //BoxShadow
-                      BoxShadow(
-                        color: Colors.white,
-                        offset: Offset(0.0, 0.0),
-                        blurRadius: 0.0,
-                        spreadRadius: 0.0,
-                      ), //BoxShadow
-                    ],*/
-                    ),
+
                     child: const TextField(
+                      style: TextStyle(
+                        color: Colors.black
+                      ),
                       decoration: InputDecoration(
-                        enabledBorder: InputBorder.none
+                        enabledBorder: InputBorder.none,
                       ),
                     ),
 
