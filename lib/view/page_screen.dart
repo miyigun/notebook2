@@ -13,7 +13,7 @@ class PageScreen extends ConsumerWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 0.8,
-        height: MediaQuery.of(context).size.height * 0.75,
+        height: MediaQuery.of(context).size.height * 0.65,
         decoration: BoxDecoration(
           image: const DecorationImage(
             opacity: 0.4,

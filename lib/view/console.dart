@@ -14,7 +14,7 @@ class Console extends ConsumerWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 0.8,
-        height: 120,
+        height: 180,
         decoration: BoxDecoration(
           image: const DecorationImage(
             image: AssetImage("assets/images/wood_floor.jpg"),
@@ -29,6 +29,9 @@ class Console extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(
+              height: 5,
+            ),
             Row(
               //mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -61,6 +64,16 @@ class Console extends ConsumerWidget {
                       iconSize: 30,
                       onPressed: () {},
                     )),
+              ],
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Row(
+              //mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+
                 const SizedBox(width: 10),
                 Container(
                     decoration: const ShapeDecoration(
@@ -84,9 +97,9 @@ class Console extends ConsumerWidget {
                     child: Text(
                       watch.fontSize.toString(),
                       style: const TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue
                       ),
                     )
                 ),
@@ -103,22 +116,22 @@ class Console extends ConsumerWidget {
                       iconSize: 30,
                       onPressed: () => watch.fontIncrease(),
                     )),
-                const SizedBox(width: 10),
+                const SizedBox(width: 110),
                 Container(
-                    decoration: const ShapeDecoration(
-                      color: Colors.white,
-                      shape: CircleBorder(),
-                    ),
-                    child: Icon(
-                      Icons.palette_sharp,
-                      size: 40,
-                      color: watch.fontColor,
-                    ),),
+                  decoration: const ShapeDecoration(
+                    color: Colors.white,
+                    shape: CircleBorder(),
+                  ),
+                  child: Icon(
+                    Icons.palette_sharp,
+                    size: 50,
+                    color: watch.fontColor,
+                  ),),
                 SizedBox(
                   width: 30,
                   child: PopupMenuButton(
                     icon: const Icon(Icons.arrow_drop_down_circle_sharp
-                    ,color: Colors.white,size: 30,),
+                      ,color: Colors.white,size: 30,),
                     onSelected: (value) {
                       // your logic
                     },
@@ -229,7 +242,7 @@ class Console extends ConsumerWidget {
                         read.changeIsUnderline();
                       },
                     )),
-                const SizedBox(width: 20),
+                const SizedBox(width: 40),
                 Container(
                     decoration: const ShapeDecoration(
                       color: Colors.white,
@@ -278,7 +291,12 @@ class Console extends ConsumerWidget {
                       },
                     )),
               ],
-            )
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+
+
           ],
         ),
       ),
