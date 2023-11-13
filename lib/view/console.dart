@@ -61,7 +61,7 @@ class Console extends ConsumerWidget {
                       iconSize: 30,
                       onPressed: () {},
                     )),
-                const SizedBox(width: 80),
+                const SizedBox(width: 30),
                 Container(
                     decoration: const ShapeDecoration(
                       color: Colors.white,
@@ -72,8 +72,24 @@ class Console extends ConsumerWidget {
                         Icons.text_decrease,
                       ),
                       iconSize: 30,
-                      onPressed: () {},
+                      onPressed: () => watch.fontDecrease(),
                     )),
+                const SizedBox(width: 10),
+
+                Container(
+                    decoration: const ShapeDecoration(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(),
+                    ),
+                    child: Text(
+                      watch.fontSize.toString(),
+                      style: const TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue
+                      ),
+                    )
+                ),
                 const SizedBox(width: 10),
                 Container(
                     decoration: const ShapeDecoration(
@@ -85,7 +101,7 @@ class Console extends ConsumerWidget {
                         Icons.text_increase,
                       ),
                       iconSize: 30,
-                      onPressed: () {},
+                      onPressed: () => watch.fontIncrease(),
                     )),
                 const SizedBox(width: 10),
                 Container(

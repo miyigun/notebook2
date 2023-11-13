@@ -9,6 +9,8 @@ class Controller extends ChangeNotifier {
   bool isAlignRight = false;
   bool isAlignJustify = false;
 
+  int fontSize=10;
+
   void changeIsBold() {
     isBold = !isBold;
 
@@ -40,6 +42,22 @@ class Controller extends ChangeNotifier {
       isAlignLeft=false;
       isAlignJustify=false;
       isAlignRight = true;
+    }
+
+    notifyListeners();
+  }
+
+  void fontDecrease() {
+    if (fontSize>1) {
+      fontSize--;
+    }
+
+    notifyListeners();
+  }
+
+  void fontIncrease() {
+    if (fontSize<40) {
+      fontSize++;
     }
 
     notifyListeners();
