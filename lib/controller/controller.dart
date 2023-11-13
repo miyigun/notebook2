@@ -9,6 +9,8 @@ class Controller extends ChangeNotifier {
   bool isAlignRight = false;
   bool isAlignJustify = false;
 
+  TextAlign textAlign=TextAlign.start;
+
   int fontSize=10;
 
   Color fontColor=Colors.black;
@@ -36,14 +38,17 @@ class Controller extends ChangeNotifier {
       isAlignLeft=true;
       isAlignJustify=false;
       isAlignRight = false;
+      textAlign=TextAlign.start;
     } else if (align == 'justify') {
       isAlignLeft=false;
       isAlignJustify=true;
       isAlignRight = false;
+      textAlign=TextAlign.justify;
     } else if (align == 'right') {
       isAlignLeft=false;
       isAlignJustify=false;
       isAlignRight = true;
+      textAlign=TextAlign.end;
     }
 
     notifyListeners();
