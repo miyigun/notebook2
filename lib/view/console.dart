@@ -61,7 +61,7 @@ class Console extends ConsumerWidget {
                       iconSize: 30,
                       onPressed: () {},
                     )),
-                const SizedBox(width: 30),
+                const SizedBox(width: 10),
                 Container(
                     decoration: const ShapeDecoration(
                       color: Colors.white,
@@ -109,14 +109,71 @@ class Console extends ConsumerWidget {
                       color: Colors.white,
                       shape: CircleBorder(),
                     ),
-                    child: IconButton(
-                      //color: Colors.red,
-                      icon: const Icon(
-                        Icons.palette_sharp,
-                      ),
-                      iconSize: 30,
-                      onPressed: () {},
-                    )),
+                    child: Icon(
+                      Icons.palette_sharp,
+                      size: 40,
+                      color: watch.fontColor,
+                    ),),
+                SizedBox(
+                  width: 30,
+                  child: PopupMenuButton(
+                    icon: const Icon(Icons.arrow_drop_down_circle_sharp
+                    ,color: Colors.white,size: 30,),
+                    onSelected: (value) {
+                      // your logic
+                    },
+                    itemBuilder: (BuildContext bc) {
+                      return  [
+                        PopupMenuItem(
+                          value: '/black',
+                          child: Container(
+                            width: 20,
+                            decoration: BoxDecoration(//DecorationImage
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 8,
+                              ), //Border.all
+                              borderRadius: BorderRadius.circular(15),
+                              //BoxShadow
+                            ),
+                          ),
+                          onTap: ()=> watch.changeFontColor('black'),
+
+                        ),
+                        PopupMenuItem(
+                          value: '/blue',
+                          child: Container(
+                            width: 20,
+                            decoration: BoxDecoration(//DecorationImage
+                              border: Border.all(
+                                color: Colors.blue,
+                                width: 8,
+                              ), //Border.all
+                              borderRadius: BorderRadius.circular(15),
+                              //BoxShadow
+                            ),
+                          ),
+                          onTap: ()=> watch.changeFontColor('blue'),
+                        ),
+                        PopupMenuItem(
+                          value: '/red',
+                          child: Container(
+                            width: 20,
+                            decoration: BoxDecoration(//DecorationImage
+                              border: Border.all(
+                                color: Colors.red,
+                                width: 8,
+                              ), //Border.all
+                              borderRadius: BorderRadius.circular(15),
+                              //BoxShadow
+                            ),
+                          ),
+                          onTap: ()=> watch.changeFontColor('red'),
+                        )
+                      ];
+                    },
+                  ),
+                )
               ],
             ),
             const SizedBox(

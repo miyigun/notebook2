@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Controller extends ChangeNotifier {
   bool isBold = false;
@@ -10,6 +10,8 @@ class Controller extends ChangeNotifier {
   bool isAlignJustify = false;
 
   int fontSize=10;
+
+  Color fontColor=Colors.black;
 
   void changeIsBold() {
     isBold = !isBold;
@@ -58,6 +60,20 @@ class Controller extends ChangeNotifier {
   void fontIncrease() {
     if (fontSize<40) {
       fontSize++;
+    }
+
+    notifyListeners();
+  }
+
+  void changeFontColor(String color){
+    if (color=='black'){
+      fontColor=Colors.black;
+    }
+    else if (color=='blue'){
+      fontColor=Colors.blue;
+    }
+    else if (color=='red'){
+      fontColor=Colors.red;
     }
 
     notifyListeners();
