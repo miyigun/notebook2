@@ -14,7 +14,7 @@ class TextEditor extends ConsumerWidget{
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: MediaQuery.of(context).size.width*0.8,
-                height: 100,
+                height: 120,
                 decoration: BoxDecoration(
                   image: const DecorationImage(
                     image: AssetImage("assets/images/wood_floor.jpg"),
@@ -43,49 +43,127 @@ class TextEditor extends ConsumerWidget{
                     ), //BoxShadow
                   ],*/
                 ),
-                child: Row(
-                  //mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(width:10),
-                    Container(
-                        decoration: const ShapeDecoration(
-                          color: Colors.white,
-                          shape: CircleBorder(),
-                        ),
-                        child: IconButton(
-                          icon: const Icon(
-                            Icons.format_bold_sharp,
-                          ),
-                          iconSize: 30,
-                          onPressed: () {},
-                        )),
-                    const SizedBox(width:10),
-                    Container(
-                        decoration: const ShapeDecoration(
-                          color: Colors.white,
-                          shape: CircleBorder(),
-                        ),
-                        child: IconButton(
-                          icon: const Icon(
-                            Icons.format_italic_sharp,
-                          ),
-                          iconSize: 30,
-                          onPressed: () {},
-                        )),
-                    const SizedBox(width:10),
-                    Container(
-                        decoration: const ShapeDecoration(
-                          color: Colors.white,
-                          shape: CircleBorder(),
-                        ),
-                        child: IconButton(
-                          icon: const Icon(
-                            Icons.format_underline_sharp,
-                          ),
-                          iconSize: 30,
-                          onPressed: () {},
-                        )),
+                    Row(
+                      //mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const SizedBox(width:10),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(
+                                eccentricity: 0.2,
+                              ),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.folder_sharp,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+                        const SizedBox(width:10),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.save_sharp,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+
+                      ],
+                    ),
+                    SizedBox(height: 5,),
+                    Row(
+                      children: [
+                        const SizedBox(width:10),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.format_bold_sharp,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+                        const SizedBox(width:10),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.format_italic_sharp,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+                        const SizedBox(width:10),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.format_underline_sharp,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+                        const SizedBox(width:20),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.text_decrease,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+                        const SizedBox(width:10),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.text_increase,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+                        const SizedBox(width:20),
+                        Container(
+                            decoration: const ShapeDecoration(
+                              color: Colors.white,
+                              shape: CircleBorder(),
+                            ),
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.format_align_justify_sharp,
+                              ),
+                              iconSize: 30,
+                              onPressed: () {},
+                            )),
+                      ],
+                    )
                   ],
                 ),
               ),
